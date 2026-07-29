@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rezzy-nuke-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: REQUIRED_GUILD_ID
+        sync: false
+      - key: BOOSTER_ROLE_ID
+        sync: false
